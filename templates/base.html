@@ -39,71 +39,25 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="main-nav" class="row d-none d-lg-flex">
-            <div class="col-12 col-md-4 text-center my-auto">
+            <div class="col-12 col-md-9 text-center my-auto">
                 <a href="" class="logo">
                     <h2>Holgate Engineering</h2>
                 </a>
             </div>
-            <div class="col-12 col-md-3 my-auto">
-                <form method="GET" action="">
-                    <div class="input-group my-auto">
-                        <input class="form-control rounded" type="text" name="q" placeholder="Search Dishes">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-search" aria-label="search" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-md-5 mt-2">
+
+            <div class="col-12 col-md-3 mt-2">
                 <ul class="list-inline list-unstyled text-center">
                     <li class="list-inline-item">
                         <a class="nav-link" href="">
                             <div class="text-center">
                                 <div><i class="fas fa-utensils"></i></div>
                                 <p class="nav-heading">
-                                    Book a Table
+                                    Pay an Invoice
                                 </p>
                             </div>
                         </a>
                     </li>
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="nav-heading">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu account-dropdown border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Restaurant Admin</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="" class="dropdown-item">Register</a>
-                            <a href="" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="nav-heading">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
+
 
                 </ul>
             </div>
@@ -118,11 +72,6 @@
             </nav>
         </div>
 
-        <div id="offer-banner" class="row text-center">
-            <div class="col 12 bg-secondary pt-2 text-white">
-                <p class="offer">10% off with code: 10OFF</p>
-            </div>
-        </div>
     </header>
 
     {% block page_header %}
