@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 /*-- Media Queries --*/
 
 @media (min-width: 992px) {
@@ -10,7 +12,7 @@
     }
 
     .page-header-container {
-        padding-top: 195px;
+        padding-top: 130px;
     }
 }
 
@@ -19,4 +21,23 @@
     .page-header-container {
         padding-top: 169px;
     }
+}
+
+.logo a {
+    color: rgb(90, 89, 89);
+    font-family: Special Elite;
+    font-size: 45px;
+    text-transform: uppercase;
+
+}
+
+.main-img {
+    background: url('/media/holgateeng.jpg') no-repeat center;
+    background-size: cover;
+    height: calc(100vh - 150px);
+    position: relative;
+}
+
+.img-container {
+    margin: 0px;
 }
