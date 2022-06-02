@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block extra_css %}
 <style type="text/css">
@@ -23,14 +24,14 @@
     <div class="col-12 col-md-6">
         Get in Touch
         <div>
-            <form action="" method="POST" class="rounded">
+            <form action="{% url 'contact' %}" method="POST" class="rounded">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label text-black px-2 w-auto">Your Details</legend>
-                    {{ .full_name | as_crispy_field }}
-                    {{ .email | as_crispy_field }}
-                    {{ .phone_number | as_crispy_field }}
-                    {{ .request | as_crispy_field }}
+                    {{ contact_form.full_name | as_crispy_field }}
+                    {{ contact_form.email | as_crispy_field }}
+                    {{ contact_form.phone_number | as_crispy_field }}
+                    {{ contact_form.request | as_crispy_field }}
 
                 </fieldset>
                 <button type="submit" class="buttons rounded">Send</button>
