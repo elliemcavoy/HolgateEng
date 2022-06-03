@@ -22,8 +22,8 @@
 {% block content %}
 <div class="row">
     <div class="col-12 col-md-6">
-        Get in Touch
-        <div>
+        <h2 class="text-center">Get in Touch</h2>
+        <div class="text-center">
             <form action="{% url 'contact' %}" method="POST" class="rounded">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
@@ -39,6 +39,7 @@
         </div>
     </div>
     <div class="col-12 col-md-6">
+        <h2 class="text-center">Where to find us</h2>
         <div id="map" class="h-100">
 
         </div>
