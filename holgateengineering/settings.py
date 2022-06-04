@@ -24,9 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h#ag9g=h!1=-)e65$#70!nssw-toz02yms#x6ye^np()v0z2(3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if "IN_DEVELOPMENT" in os.environ:
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-elliemcavoy-holgateengi-fbi2jqeoifo.ws-eu46.gitpod.io']
 
 
 # Application definition
@@ -38,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'home',
     'services',
     'contact',
@@ -78,6 +84,13 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+SITE_ID = 1
 
 WSGI_APPLICATION = 'holgateengineering.wsgi.application'
 
@@ -130,6 +143,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
