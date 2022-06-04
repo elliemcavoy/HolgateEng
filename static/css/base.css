@@ -32,7 +32,7 @@
 }
 
 .main-img {
-    background: url('media/holgateeng.jpg') no-repeat center;
+    background: url('/media/holgateeng.jpg') no-repeat center;
     background-size: cover;
     height: calc(100vh - 150px);
     position: relative;
