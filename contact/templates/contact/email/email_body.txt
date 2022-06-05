@@ -1,0 +1,1 @@
+Your order from Zolsha is on its way! Order Number: {{ order.order_number }}
