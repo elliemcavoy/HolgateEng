@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<div class="container page-header-container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="text-center">Services</h2>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="services-container">
+            {% for service in services %}
+            <div class="row m-2">
+                <div class="col-11 col-md-10 m-auto">
+                    <div class="card services-card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12 col-md-10 text-center text-md-left">
+                                    <h5 class="mb-0">
+                                        {{ service.name }}
+                                    </h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-md-5 pt-1">
+                                    {{ service.description }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}
