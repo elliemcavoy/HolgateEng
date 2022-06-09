@@ -29,7 +29,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-elliemcavoy-holgateengi-fbi2jqeoifo.ws-eu47.gitpod.io']
 
 
 
