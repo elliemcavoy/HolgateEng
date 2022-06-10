@@ -19,38 +19,36 @@
     <div class="row">
         <div class="services-container">
             {% for service in services %}
-            <div class="row m-2">
-                <div class="col-11 col-md-10 m-auto">
-                    <div class="card services-card">
-                        <div class="card-header">
-                            <div class="row">
-                                <img src="../{{MEDIA_URL}}/{{ service.image }}">
-                                <div class="col-12 col-md-10 text-center text-md-left">
-                                    <h5 class="mb-0">
-                                        {{ service.name }}
-                                    </h5>
-                                </div>
+            <div class="col-11 col-md-5 m-auto services">
+                <div class="card services-card text-center">
+                    <div class="card-header">
+                        <div class="row services-img">
+                            <img src="../{{MEDIA_URL}}/{{ service.image }}">
 
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-12 col-md-5 pt-1">
-                                    {{ service.description }}
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                    {% endfor %}
+                    <div class="card-body">
+                        <div class="row">
+                            <h5 class="mb-0 text-center">
+                                {{ service.name }}
+                            </h5>
+                            {{ service.description }}
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
+            {% endfor %}
         </div>
-
-
-
     </div>
+
+
+</div>
+
+
+
+</div>
 </div>
 
 
