@@ -39,7 +39,7 @@ def contact_form_success(request, ref_number):
     
     def _send_confirmation_email(self, contactform):
         """Send the user a confirmation email"""
-        customer_email = contactform.email
+        email = settings.DEFAULT_EMAIL
         subject = render_to_string(
             'contact/email/email_subject.txt',
             {'contactform': contactform})
@@ -51,7 +51,7 @@ def contact_form_success(request, ref_number):
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            [customer_email]
+            [email]
         )
     template = 'contact/contactform_success.html'
     context = {
