@@ -44,10 +44,27 @@
 
 .services {
     display: inline-block;
+    margin-top: 0px !important;
+    margin-bottom: 15px !important;
+
+}
+
+.services-card {
+    border-radius: 10px;
 }
 
 .services-img img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header {
+    height: 300px;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(119, 119, 119, 0.61) !important;
 }

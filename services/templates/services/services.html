@@ -16,26 +16,26 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="services-container">
+    <div class="services-container">
+        <div class="row">
+
             {% for service in services %}
             <div class="col-11 col-md-5 m-auto services">
-                <div class="card services-card text-center">
-                    <div class="card-header">
-                        <div class="row services-img">
-                            <img src="../{{MEDIA_URL}}/{{ service.image }}">
+                <div class="card services-card shadow text-center">
+                    <div class="card-header services-img p-0">
+                        <img src="../{{MEDIA_URL}}/{{ service.image }}">
 
 
-                        </div>
+
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <h5 class="mb-0 text-center">
-                                {{ service.name }}
-                            </h5>
-                            {{ service.description }}
+                    <div class="card-body text-center">
 
-                        </div>
+                        <h5 class="mb-0 text-center">
+                            {{ service.name }}
+                        </h5>
+                        {{ service.description }}
+
+
                     </div>
                 </div>
             </div>
