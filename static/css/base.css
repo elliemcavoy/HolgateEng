@@ -1,27 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-/*-- Media Queries --*/
 
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .page-header-container {
-        padding-top: 130px;
-    }
-}
-
-@media (max-width: 992px) {
-
-    .page-header-container {
-        padding-top: 169px;
-    }
-}
 
 .logo a {
     color: rgb(90, 89, 89);
@@ -29,6 +8,10 @@
     font-size: 45px;
     text-transform: uppercase;
 
+}
+
+#main-nav {
+    background-color: rgb(226, 223, 223);
 }
 
 .main-img {
