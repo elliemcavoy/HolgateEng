@@ -12,7 +12,11 @@
 {% block page_header %}
 <div class="container page-header-container">
     <div class="row">
-        <div class="col">Contact Us</div>
+        <div class="col">
+            <hr>
+            <h2 class="text-center">Contact Us</h2>
+            <hr>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -50,6 +54,6 @@
 {% endblock %}
 {% block postloadjs %}
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUAFYHDp1-gHZaCgXKJRhkGutt_PosGzs&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb15O7pfelAbTgb4fsq6016mJr6odvli4&callback=initMap" async defer></script>
 <script src="{% static 'contact/js/map.js' %}"></script>
 {% endblock %}
