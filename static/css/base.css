@@ -44,6 +44,29 @@
     border-top-right-radius: 10px;
 }
 
+.form-container {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.textinput {
+    border: solid 1px grey;
+    width: 70% !important;
+}
+
+#id_request {
+    height: 100px;
+}
+
+.control-group {
+    margin-top: 10px;
+}
+
+.emailinput {
+    border: solid 1 px grey;
+    width: 70% !important;
+}
+
 .card-header {
     height: 300px;
 }
@@ -60,4 +83,5 @@
 #map {
     margin: 30px;
     border: solid 3px grey;
+    border-radius: 10px;
 }
