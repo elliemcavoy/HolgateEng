@@ -24,7 +24,9 @@
 {% block content %}
 <div class="row mt-2">
     <div class="col-12 col-md-5 mx-auto">
+        <hr>
         <h2 class="text-center">Get in Touch</h2>
+        <hr>
         <div class="text-center form-container shadow p-2 m-2">
             <form action="{% url 'contact' %}" method="POST" class="rounded">
                 {% csrf_token %}
@@ -39,16 +41,18 @@
             </form>
         </div>
     </div>
-    <div class="col-12 col-md-5 m-auto">
+    <div class="col-12 col-md-5 mx-auto">
+        <hr>
         <h2 class="text-center">Where to find us</h2>
+        <hr>
         <div class="card services-card shadow text-center m-2">
             <div class="map-header p-0">
                 <div id="map" class="h-100 m-2">
 
                 </div>
             </div>
-            <div class="card-body text-center" id="body-text">
-                Holgate Engineering, Main Street, Cononley, Keighley BD20 8LJ
+            <div class="card-body text-center">
+                Holgate Engineering, Main Street,<br> Cononley, Keighley BD20 8LJ
 
             </div>
         </div>
