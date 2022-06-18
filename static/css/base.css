@@ -89,3 +89,15 @@ footer {
     border: solid 1px grey;
     border-radius: 10px;
 }
+
+.contact-btn {
+    background-color: white;
+    border: solid 1px grey
+}
+
+.contact-btn:hover {
+    background-color: rgb(226, 223, 223);
+    border: solid 1px rgb(226, 223, 223);
+    font-weight: 500;
+    color: rgb(90, 89, 89);
+}

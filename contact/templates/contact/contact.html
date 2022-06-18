@@ -30,14 +30,14 @@
         <div class="text-center form-container shadow p-2 m-2">
             <form action="{% url 'contact' %}" method="POST" class="rounded">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 mb-3">
                     {{ contact_form.full_name | as_crispy_field }}
                     {{ contact_form.email | as_crispy_field }}
                     {{ contact_form.phone_number | as_crispy_field }}
                     {{ contact_form.request | as_crispy_field }}
 
                 </fieldset>
-                <button type="submit">Send</button>
+                <button type="submit" class="contact-btn mb-2">Send</button>
             </form>
         </div>
     </div>
