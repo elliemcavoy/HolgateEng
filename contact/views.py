@@ -19,7 +19,7 @@ def contact(request):
         }
         contact_form = ContactForm(form_data)
         if contact_form.is_valid():
-            _send_confirmation_email(contact_form)
+            
             contactus = contact_form.save(commit=False)
             contactus.save()
             
@@ -43,7 +43,7 @@ def contact(request):
 def contact_form_success(request, ref_number):
 
     contactform = get_object_or_404(Contact, ref_number=ref_number)
-    
+    _send_confirmation_email(contactform)
     template = 'contact/contactform_success.html'
     context = {
         'contactform': contactform,
@@ -55,15 +55,15 @@ def contact_form_success(request, ref_number):
 
 
 
-def _send_confirmation_email(contact_form):
+def _send_confirmation_email(contactform):
     """Send the user a confirmation email"""
     email = settings.DEFAULT_EMAIL
     subject = render_to_string(
             'contact/email/email_subject.txt',
-            {'contactform': contact_form})
+            {'contactform': contactform})
     body = render_to_string(
             'contact/email/email_body.txt',
-            {'contactform': contact_form, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'contactform': contactform})
 
     send_mail(
             subject,

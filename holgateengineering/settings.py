@@ -152,4 +152,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_EMAIL = 'office@holgateeng.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'office@holgateeng.com'
+DEFAULT_EMAIL = 'ellie.mcavoy@outlook.com'

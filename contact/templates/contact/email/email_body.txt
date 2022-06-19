@@ -1,1 +1,6 @@
-Your order from Zolsha is on its way! Order Number: {{ order.order_number }}
+See below the details of the request:
+
+Name: {{ contactform.full_name }}
+Email Address: {{ contactform.email }}
+Phone Number: {{ contactform.phone_number }}
+Request: {{ contactform.request }}
