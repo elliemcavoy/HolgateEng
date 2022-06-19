@@ -9,9 +9,6 @@ from .forms import ContactForm
 
 def contact(request):
     """ View to render the index page """
-    def __init__(self, request):
-        self.request = request
-
 
     if request.method == 'POST':
         form_data = {
@@ -22,11 +19,13 @@ def contact(request):
         }
         contact_form = ContactForm(form_data)
         if contact_form.is_valid():
+            _send_confirmation_email(contact_form)
             contactus = contact_form.save(commit=False)
             contactus.save()
-            _send_confirmation_email(contactus)
+            
             return redirect(reverse('contact_form_success',
                             args=[contactus.ref_number]))
+            
 
         else:
             messages.error(request, 'There was an error with your form. \
@@ -44,7 +43,7 @@ def contact(request):
 def contact_form_success(request, ref_number):
 
     contactform = get_object_or_404(Contact, ref_number=ref_number)
-
+    
     template = 'contact/contactform_success.html'
     context = {
         'contactform': contactform,
@@ -56,15 +55,15 @@ def contact_form_success(request, ref_number):
 
 
 
-def _send_confirmation_email(self, contactus):
+def _send_confirmation_email(contact_form):
     """Send the user a confirmation email"""
     email = settings.DEFAULT_EMAIL
     subject = render_to_string(
             'contact/email/email_subject.txt',
-            {'contactform': contactform})
+            {'contactform': contact_form})
     body = render_to_string(
             'contact/email/email_body.txt',
-            {'contactform': contactform, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'contactform': contact_form, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
     send_mail(
             subject,
