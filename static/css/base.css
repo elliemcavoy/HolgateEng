@@ -25,6 +25,16 @@ footer {
     position: relative;
 }
 
+.logo-img {
+    background: url('/media/logo.jpg') no-repeat center;
+    background-size: cover;
+    height: 220px;
+    width: 220px;
+    border: solid 2px grey;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .img-container {
     margin: 0px;
 }
