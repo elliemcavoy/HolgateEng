@@ -115,3 +115,7 @@ footer {
 body {
     height: 100%;
 }
+
+.logo a:hover {
+    text-decoration: none;
+}
