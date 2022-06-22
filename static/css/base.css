@@ -10,6 +10,11 @@
 
 }
 
+h2 {
+    font-family: Special Elite;
+    text-transform: uppercase;
+}
+
 #main-nav {
     background-color: rgb(226, 223, 223);
 }
@@ -62,7 +67,7 @@ footer {
 .form-container {
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, .125);
-    height: 100%;
+    height: 80%;
 }
 
 .textinput {
