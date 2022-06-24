@@ -19,9 +19,7 @@ h2 {
     background-color: rgb(226, 223, 223);
 }
 
-footer {
-    background-color: rgb(226, 223, 223);
-}
+
 
 .main-img {
     background: url('/media/holgateeng.jpg') no-repeat center;
@@ -107,6 +105,11 @@ footer {
     border-radius: 10px;
 }
 
+.thank-you {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
 .contact-btn {
     background-color: white;
     border: solid 1px grey
@@ -125,6 +128,17 @@ footer {
 
 .facebook a:hover {
     text-decoration: none;
+}
+
+.icon {
+    color: grey;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.icon:hover {
+
+    color: black;
 }
 
 .contact-info {
@@ -146,4 +160,17 @@ body {
 
 .logo a:hover {
     text-decoration: none;
+}
+
+.body {
+    min-height: 93vh;
+}
+
+
+.footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(226, 223, 223);
 }

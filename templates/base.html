@@ -42,35 +42,37 @@
 </head>
 
 <body>
-    <header class="container-fluid" id="main-nav">
-        <div class="row d-none d-lg-flex">
-            <div class="col-12 pt-4 text-center my-auto logo">
-                <a href="{% url 'home' %}">
-                    Holgate Engineering
-                </a>
+    <div class="body">
+        <header class="container-fluid" id="main-nav">
+            <div class="row d-none d-lg-flex">
+                <div class="col-12 pt-4 text-center my-auto logo">
+                    <a href="{% url 'home' %}">
+                        Holgate Engineering
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-nav.html' %}
-                {% include 'includes/navigation.html' %}
-            </nav>
-        </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-nav.html' %}
+                    {% include 'includes/navigation.html' %}
+                </nav>
+            </div>
 
-    </header>
+        </header>
 
-    {% block page_header %}
-    <hr>
-    {% endblock %}
+        {% block page_header %}
+        <hr>
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
 
+        {% endblock %}
+    </div>
     <footer>
-        <div class="container-fluid">
+        <div class="footer">
             <div class="row">
                 <div class="col-12 text-center pt-2 pb-2">
                     Site by SixTwentyOne Designs
