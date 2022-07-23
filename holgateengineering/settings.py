@@ -25,10 +25,13 @@ SECRET_KEY = 'django-insecure-h#ag9g=h!1=-)e65$#70!nssw-toz02yms#x6ye^np()v0z2(3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+if "IN_DEVELOPMENT" in os.environ:
+    DEBUG = True
+else:
+    DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://holgateeng.com/']
 CSRF_TRUSTED_ORIGINS = ['https://8000-elliemcavoy-holgateengi-fbi2jqeoifo.ws-eu47.gitpod.io', 'https://holgateeng.com/']
 
 
